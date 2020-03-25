@@ -62,9 +62,9 @@ export default function Profile(){
                 {incidents.map(incident => (
                     <li key={incident.id}>
                         <strong>CASO:</strong>
-                        <p>{incidents.title}</p>
+                        <p>{incident.title}</p>
                         <strong>Descricao:</strong>
-                        <p>{incidents.description}</p>
+                        <p>{incident.description}</p>
                         <strong>valor :</strong>
                         <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(incident.value)}</p>
                         <button onClick={() => handleDeleteIncident(incident.id)} type="button">
